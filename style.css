@@ -1,17 +1,19 @@
-body, h1, h2, h3, p,ul, li,a{
+/* general reset */
+body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
-    font-family: 'arial', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
+
 body {
     background-color: #f0f8ff;
     color: #333;
     line-height: 1.6;
-
 }
-header{ 
+
+header {
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     padding: 20px;
     display: flex;
@@ -19,40 +21,41 @@ header{
     align-items: center;
     color: white;
 }
+
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
 }
+
 nav ul {
     display: flex;
     gap: 20px;
-
 }
-nav a{
+nav a {
     color: white;
     font-weight: bold;
     transition: color 0.3s;
 }
-nav a:hover{
+nav a:hover {
     color: #f0f8ff;
 }
-.hero{
-color: white;
-text-align: center;
-padding: 100px 20px;
-}
 
+.hero {
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
     color: #333;
 }
-.hero p{
+.hero p {
     font-size: 20px;
     margin-bottom: 30px;
     color: #333;
 }
-.hero .btn-cta {
+.hero .btn-ta {
     display: inline-block;
     background: #83c5be;
     color: #333;
@@ -60,11 +63,12 @@ padding: 100px 20px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-
 }
-.hero .btn-cta:hover{
+.hero .btn-cta:hover {
     background: #028090;
 }
+
+/* Destinasi Section */
 #destinasi {
     padding: 50px 20px;
     text-align: center;
@@ -83,12 +87,16 @@ padding: 100px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    padding: 10px;
+    text-align: center;
 }
 .card img {
-    width: 1000px;
-    height: auto;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 4px;
 }
-.card h3{
+.card h3 {
     font-size: 24px;
     margin: 10px;
 }
@@ -96,7 +104,130 @@ padding: 100px 20px;
     font-size: 16px;
     margin: 10px;
 }
-footer{
+
+/* testimoni section */
+#testimoni {
+    background: #edf6f9;
+    padding: 50px 20px;
+}
+#testimoni h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.testimoni-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.testimoni-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.testimoni-card p {
+    font-style: italic;
+}
+.testimoni-card h3 {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Paket Wisata Section */
+#paket {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#paket h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Grid Layout */
+.paket-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Card Styles */
+.card-paket {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Image */
+.card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Card Headline */
+.card-hedline h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #007BFF;
+}
+
+/* Card Description */
+.card-description {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #555;
+}
+
+.card-description .duration {
+    font-style: italic;
+    color: #777;
+    margin: 10px 0;
+}
+
+.card-description .price {
+    font-weight: bold;
+    color: #28a745;
+    margin: 10px 0;
+}
+
+/* Card Button */
+.card-button {
+    margin: 10px 0 20px;
+}
+
+.card-button .btn-ta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card-button .btn-ta:hover {
+    background-color: #0056b3;
+}
+
+/* footer  */
+footer {
     background: #006d77;
     color: white;
     text-align: center;
